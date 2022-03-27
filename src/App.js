@@ -1,82 +1,61 @@
-/* src/App.js */
-import React, { useEffect, useState } from 'react'
-import Amplify, { API, graphqlOperation } from 'aws-amplify'
-import { createTodo } from './graphql/mutations'
-import { listTodos } from './graphql/queries'
+import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+import $ from 'jquery';
+import './App.css';
+import Header from './Components/Header';
+import Footer from './Components/Footer';
+import About from './Components/About';
+import Resume from './Components/Resume';
+import Contact from './Components/Contact';
+import Testimonials from './Components/Testimonials';
+import Portfolio from './Components/Portfolio';
 
-import awsExports from "./aws-exports";
-Amplify.configure(awsExports);
+class App extends Component {
 
-const initialState = { name: '', description: '' }
+  constructor(props){
+    super(props);
+    this.state = {
+      foo: 'bar',
+      resumeData: {}
+    };
 
-const App = () => {
-  const [formState, setFormState] = useState(initialState)
-  const [todos, setTodos] = useState([])
-
-  useEffect(() => {
-    fetchTodos()
-  }, [])
-
-  function setInput(key, value) {
-    setFormState({ ...formState, [key]: value })
+    ReactGA.initialize('UA-110570651-1');
+    ReactGA.pageview(window.location.pathname);
 
   }
 
-  async function fetchTodos() {
-    try {
-      const todoData = await API.graphql(graphqlOperation(listTodos))
-      const todos = todoData.data.listTodos.items
-      setTodos(todos)
-    } catch (err) { console.log('error fetching todos') }
+  getResumeData(){
+    $.ajax({
+      url:'/resumeData.json',
+      dataType:'json',
+      cache: false,
+      success: function(data){
+        this.setState({resumeData: data});
+      }.bind(this),
+      error: function(xhr, status, err){
+        console.log(err);
+        alert(err);
+      }
+    });
   }
 
-  async function addTodo() {
-    try {
-      if (!formState.name || !formState.description) return
-      const todo = { ...formState }
-      setTodos([...todos, todo])
-      setFormState(initialState)
-      await API.graphql(graphqlOperation(createTodo, {input: todo}))
-    } catch (err) {
-      console.log('error creating todo:', err)
-    }
+  componentDidMount(){
+    this.getResumeData();
   }
 
-  return (
-      <div style={styles.container}>
-        <h2>Todo List</h2>
-        <input
-            onChange={event => setInput('name', event.target.value)}
-            style={styles.input}
-            value={formState.name}
-            placeholder="Name"
-        />
-        <input
-            onChange={event => setInput('description', event.target.value)}
-            style={styles.input}
-            value={formState.description}
-            placeholder="Description"
-        />
-        <button style={styles.button} onClick={addTodo}>Create Todo</button>
-        {
-          todos.map((todo, index) => (
-              <div key={todo.id ? todo.id : index} style={styles.todo}>
-                <p style={styles.todoName}>{todo.name}</p>
-                <p style={styles.todoDescription}>{todo.description}</p>
-              </div>
-          ))
-        }
+  render() {
+    return (
+      <div className="App">
+        <Header data={this.state.resumeData.main}/>
+        <About data={this.state.resumeData.main}/>
+        <Resume data={this.state.resumeData.resume}/>
+        <Portfolio data={this.state.resumeData.portfolio}/>
+        <Testimonials data={this.state.resumeData.testimonials}/>
+        <Contact data={this.state.resumeData.main}/>
+        <Footer data={this.state.resumeData.main}/>
       </div>
-  )
+    );
+  }
 }
 
-const styles = {
-  container: { width: 400, margin: '0 auto', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 20 },
-  todo: {  marginBottom: 15 },
-  input: { border: 'none', backgroundColor: '#ddd', marginBottom: 10, padding: 8, fontSize: 18 },
-  todoName: { fontSize: 20, fontWeight: 'bold' },
-  todoDescription: { marginBottom: 0 },
-  button: { backgroundColor: 'black', color: 'white', outline: 'none', fontSize: 18, padding: '12px 0px' }
-}
-
-export default App
+export default App;
