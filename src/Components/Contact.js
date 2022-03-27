@@ -5,7 +5,7 @@ class Contact extends Component {
 
     if(this.props.data){
       var name = this.props.data.name;
-      var street = this.props.data.address.street;
+      // var street = this.props.data.address.street;
       var city = this.props.data.address.city;
       var state = this.props.data.address.state;
       var zip = this.props.data.address.zip;
@@ -36,7 +36,7 @@ class Contact extends Component {
          <div className="row">
             <div className="eight columns">
 
-               <form action="https://formsubmit.co/sethbrown19@outlook.com" method="POST" id="contactForm" name="contactForm">
+               <form action="https://formsubmit.co/sethbrown782@gmail.com" method="POST" id="contactForm" name="contactForm">
 					<fieldset>
 
                   <div>
@@ -81,7 +81,7 @@ class Contact extends Component {
 					   <h4>Address and Phone</h4>
 					   <p className="address">
 						   {name}<br />
-						   {street} <br />
+						   {/*{street} <br />*/}
 						   {city}, {state} {zip}<br />
 						   <span>{phone}</span>
 					   </p>
