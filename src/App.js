@@ -19,6 +19,7 @@ const App = () => {
 
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value })
+
   }
 
   async function fetchTodos() {
