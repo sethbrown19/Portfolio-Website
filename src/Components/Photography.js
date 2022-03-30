@@ -8,7 +8,6 @@ class Photography extends Component {
         var projectImage = 'images/photography/' + photo.image;
         return <div key={photo.title} className="columns photography-item">
            <div className="item-wrap">
-            {/*<a href={photo.url} title={photo.title}>*/}
                <img alt={photo.title} src={projectImage} />
                <div className="overlay">
                   <div className="photography-item-meta">
@@ -16,8 +15,6 @@ class Photography extends Component {
                      <p>{photo.category}</p>
                   </div>
                 </div>
-            {/*  <div className="link-icon"><i className="fa fa-link"></i></div>*/}
-            {/*</a>*/}
           </div>
         </div>
       })
@@ -30,7 +27,7 @@ class Photography extends Component {
 
          <div className="twelve columns collapsed">
 
-            <h1>Check Out Some of My Work.</h1>
+            <h1>Check Out Some of My Photos.</h1>
 
             <div id="photography-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
                 {photoMap}
