@@ -62,15 +62,38 @@
     ],
     "work": [
       {
-        "company": "To be done in future release.",
-        "title": "To be done in future release.",
-        "years": "To be done in future release.",
+        "jobId": "1",
+        "company": "West Pharmaceutical Services, Inc.",
+        "title": "Global Validation Engineering",
+        "years": "Jan 2021 - Current",
         "description": "To be done in future release."
       },
       {
-        "company": "To be done in future release.",
-        "title": "To be done in future release.",
-        "years": "To be done in future release.",
+        "jobId": "2",
+        "company": "West Pharmaceutical Services, Inc.",
+        "title": "Process Engineer",
+        "years": "Jun 2019 - Dec 2020",
+        "description": "To be done in future release."
+      },
+      {
+        "jobId": "3",
+        "company": "West Pharmaceutical Services, Inc.",
+        "title": "Associate Process Engineer",
+        "years": "Jun 2018 - Jun 2019",
+        "description": "To be done in future release."
+      },
+      {
+        "jobId": "4",
+        "company": "3G Shielding Specialties",
+        "title": "Applications/ Manufacturing Engineer",
+        "years": "Apr 2017 - May 2018",
+        "description": "To be done in future release."
+      },
+      {
+        "jobId": "5",
+        "company": "Jabil",
+        "title": "Quality Engineer Intern",
+        "years": "May 2016 - Sep 2016",
         "description": "To be done in future release."
       }
     ],
@@ -88,60 +111,56 @@
         "level": "50%"
       },
       {
-        "name": "CSS",
-        "level": "60%"
+        "name": "SQL",
+        "level": "80%"
       },
       {
-        "name": "HTML5",
-        "level": "80%"
+        "name": "Kotlin",
+        "level": "50%"
       },
       {
         "name": "VueJs",
         "level": "65%"
       },
       {
-        "name": "Git",
-        "level": "80%"
+        "name": "XML",
+        "level": "70%"
       }
     ]
   },
-  "portfolio": {
-    "projects": [
+  "photography": {
+    "photos": [
       {
-        "title": "Star",
-        "category": "stars in the sky",
+        "title": "River Gorge",
+        "category": "My view of the Columbia River Gorge",
         "image": "header-background.jpg",
         "url": "n/a"
       },
       {
-        "title": "Saint Petersburg",
-        "category": "Beach trips",
+        "title": "St. Petersburg Beach",
+        "category": "Beach Trips",
         "image": "STPbeach.png",
         "url": "n/a"
       },
       {
-        "title": "Tetons",
-        "category": "my travels to the grand tetons",
+        "title": "Grand Tetons",
+        "category": "Journey through the valley of the Bears",
         "image": "teton.png",
         "url": "n/a"
       },
       {
-        "title": "Resume Website",
-        "category": "A React based resume website template",
+        "title": "Utah",
+        "category": "The sand dunes of Utah",
         "image": "utahdunes.png",
         "url": "n/a"
       }
     ]
   },
-  "testimonials": {
-    "testimonials": [
+  "siteConstruction": {
+    "siteConstruction": [
       {
-        "text": "He shoots better than I",
-        "user": "Kareem Abdul Jabbar"
-      },
-      {
-        "text": "That Seth Brown must be one of the most brilliant developers I've ever met! It is amazing that nobody has hired him yet. Hey you, you should hire this guy, he may be fresh out of University and have zero on the job experience but I am confident that he will be one of your best developers in no time!",
-        "user": "Steve Wozniak... impersonator"
+        "text": "This is my ReactJS resume website I deployed on AWS using GraphQL (this part is still in process) for the database. I built this by beginning with the Ceevee template by Styleshout http://www.styleshout.com/ and breaking up their template into isolated React components. Data is fed directly from a JSON File. My goal of building this website was to gain experience using ReactJS and AWS. I will be taking the AWS Cloud Practitioner certification exam in May 2022.",
+        "user": "1"
       }
     ]
   }

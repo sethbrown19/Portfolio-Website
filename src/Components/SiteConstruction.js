@@ -1,31 +1,33 @@
 import React, { Component } from 'react';
 
-class Testimonials extends Component {
+class SiteConstruction extends Component {
+    siteConstruction;
   render() {
 
     if(this.props.data){
-      var testimonials = this.props.data.testimonials.map(function(testimonials){
-        return  <li key={testimonials.user}>
+      var siteConstructionMap = this.props.data.siteConstruction.map(function(siteConstruction){
+        return  <li key={siteConstruction.user}>
             <blockquote>
-               <p>{testimonials.text}</p>
-               <cite>{testimonials.user}</cite>
+                <h1>Construction of this Site.</h1>
+                <div></div>
+               <p>{siteConstruction.text}</p>
             </blockquote>
          </li>
       })
     }
 
     return (
-      <section id="testimonials">
+      <section id="siteConstruction">
       <div className="text-container">
          <div className="row">
 
             <div className="two columns header-col">
-               <h1><span>Client Testimonials</span></h1>
+               {/*<h1>Construction of this Site.</h1>*/}
             </div>
 
             <div className="ten columns flex-container">
                   <ul className="slides">
-                      {testimonials}
+                      {siteConstructionMap}
                   </ul>
                </div>
             </div>
@@ -35,4 +37,4 @@ class Testimonials extends Component {
   }
 }
 
-export default Testimonials;
+export default SiteConstruction;
