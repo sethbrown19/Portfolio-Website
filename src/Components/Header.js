@@ -37,10 +37,14 @@ class Header extends Component {
             <h1 className="responsive-headline">I'm {name}.</h1>
             <h3>I'm a {city} based <span>{occupation}</span>{description}</h3>
             <hr />
+             <a className="button smoothscroll" href="/#siteConstruction">
+                 This Site
+             </a>
             <ul className="social">
                {networks}
             </ul>
          </div>
+
       </div>
 
       <p className="scrolldown">

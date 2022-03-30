@@ -133,7 +133,7 @@
       {
         "title": "River Gorge",
         "category": "My view of the Columbia River Gorge",
-        "image": "header-background.jpg",
+        "image": "gorge.png",
         "url": "n/a"
       },
       {
@@ -159,7 +159,7 @@
   "siteConstruction": {
     "siteConstruction": [
       {
-        "text": "This is my ReactJS resume website I deployed on AWS using GraphQL (this part is still in process) for the database. I built this by beginning with the Ceevee template by Styleshout http://www.styleshout.com/ and breaking up their template into isolated React components. Data is fed directly from a JSON File. My goal of building this website was to gain experience using ReactJS and AWS. I will be taking the AWS Cloud Practitioner certification exam in May 2022.",
+        "text": "This is my ReactJS resume website I deployed on AWS using GraphQL (this part is still in process) for the database. I built this by beginning with the Ceevee template by Styleshout http://www.styleshout.com/ and breaking up their template into isolated React components and modifying CSS attributes as needed. The data rendered in this site is fed directly from a JSON File. My goal of building this website was to gain experience using ReactJS and AWS. I will be taking the AWS Cloud Practitioner certification exam in May 2022.",
         "user": "1"
       }
     ]
