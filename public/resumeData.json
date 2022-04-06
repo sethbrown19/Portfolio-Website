@@ -64,7 +64,7 @@
       {
         "jobId": "1",
         "company": "West Pharmaceutical Services, Inc.",
-        "title": "Global Validation Engineer",amp
+        "title": "Global Validation Engineer",
         "years": "Jan 2021 - Current",
         "description": "To be done in future release."
       },
@@ -159,7 +159,7 @@
   "siteConstruction": {
     "siteConstruction": [
       {
-        "text": "This is my ReactJS resume website I deployed on AWS using GraphQL (this part is still in process) for the database. I built this by beginning with the Ceevee template by Styleshout http://www.styleshout.com/ and breaking up their template into isolated React components and modifying CSS attributes as needed. The data rendered in this site is fed directly from a JSON File. My goal of building this website was to gain experience using ReactJS and AWS. I will be taking the AWS Cloud Practitioner certification exam in May 2022.",
+        "text": "This is my ReactJS resume website I deployed on AWS using GraphQL service with AWS AppSync, and a REST API service with Amazon API Gateway (this part is still in process). I built this by beginning with the Ceevee template by Styleshout http://www.styleshout.com/ and breaking up their template into isolated React components and modifying CSS attributes to fit my style and design. The data rendered in this site is fed directly from a JSON File. My goal of building this website was to gain experience using ReactJS and AWS. I will be taking the AWS Cloud Practitioner certification exam in May 2022.",
         "user": "1"
       }
     ]
